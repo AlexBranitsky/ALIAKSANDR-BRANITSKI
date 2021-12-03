@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+</head>
+<body>
+    <h1 align="center">Заполните анкету</h1>
+    <form action="http://fe.it-academy.by/TestForm.php">
+        <fieldset><legend>Личные данные</legend>
+            <input type="text" name="text" pattern="^[А-Яа-яЁё]+$" maxlength="25" placeholder="Фамилия" required autofocus><br>
+            <input type="text" name="text" pattern="^[А-Яа-яЁё]+$" maxlength="20" placeholder="Имя" required><br>
+            <input type="text" name="text" pattern="^[А-Яа-яЁё]+$" maxlength="24" placeholder="Отчество" required>
+        <fieldset><legend>Паспортные данные</legend>
+            <label>text:Серия паспорта заглавные две латинские буквы<br>
+                text:Номер паспорта 7 цифр<br>
+                <input type="text" pattern="[A-Z]{2}{1.3}" size="2" maxlength="7">
+            <input type="text" pattern="[0-9] {6}" size="7" maxlength="7" required>
+        </label>
+        </fieldset>
+        <fieldset><legend>Дата рождения</legend>
+            <input type="text">Год рождения 4-е цифры<br>
+            <label>
+            <select name="list" id="list">
+                <option value="1">январь</option>
+                <option value="2">февраль</option>
+                <option value="3">март</option>
+                <option value="4">апрель</option>
+                <option value="5">май</option>
+                <option value="6">июнь</option>
+                <option value="7">июль</option>
+                <option value="8">август</option>
+                <option value="9">сентябрь</option>
+                <option value="10">октябрь</option>
+                <option value="11">ноябрь</option>
+                <option value="12">декабрь</option>
+            </select>месяц рождения</label><br>
+            <input type="number" min="1" max="31" value="1"> number:Диапозон от 1 до 31 с шагом 1
+        </fieldset>
+        <select name="list" id="list" required>
+            <option value="1">РБ</option>
+            <option value="2">РФ</option>
+        </select><br>
+        <label>Адрес:<br>
+            <textarea name="textarea" id="" cols="30" rows="3"></textarea></label>
+        </fieldset>
+        <fieldset><legend>Интересы</legend>
+            <fieldset><legend>Хобби</legend><br>
+                <label><input type="checkbox" name="1">Рыбалка</label><br>
+                <label><input type="checkbox" name="2">Астрономия</label><br>
+                <label><input type="checkbox" name="1">Дайвинг</label><br>
+                <label><input type="checkbox" name="1">Марки</label><br>
+            </fieldset>
+            <fieldset><legend>Домашние животные</legend><br>
+                <select size="12" name="list" multiple id="list" >
+                    <optgroup label="Попугаи">
+                        <option value="1">Волнистый</option>
+                        <option value="2">Ара</option>
+                        <option value="3">Неразлучник</option>
+                    </optgroup>
+                    <optgroup label="Рыба">
+                        <option value="1">Караси</option>
+                        <option value="2">Окуни</option>
+                        <option value="3">Лсетр</option>
+                    </optgroup>
+                    <optgroup label="Птицы">
+                        <option value="1">Стая ворон</option>
+                        <option value="2">Аист</option>
+                        <option value="3">Археоптерикс</option>
+                    </optgroup>
+                </select>
+            </fieldset>       
+    </form>
+    <form action="http://fe.it-academy.by/TestForm.php" method="post">
+        <fieldset><legend>Данные для входа и восстановления пароля</legend><br>
+        <input type="text" id="login" pattern="[A-Za-z]{5,}" maxlength="20" required>Только латинские буквы (без пробелов) не менее 5 символов<br>
+        <input type="password" pattern="[A-Za-z]{10,}" maxlength="20" required autocomplete="off">password. Только латиница не менее 10 символов 
+        </fieldset>
+    </form>
+    <form action="http://fe.it-academy.by/TestForm.php" method="post">
+        <fieldset><legend>Координаты</legend>
+        <input type="email" name="email"> e-mail<br>
+        <input type="url" name="site"> url
+    </fieldset>
+    </form>
+    <form action="http://fe.it-academy.by/TestForm.php">
+        <fieldset><legend>цифры</legend>
+            <input type="number" min="-2.5" max="2.5" step="0.1"> number: от -2,5 до 2,5 с шагом 0,1<br>
+            <input type="range" min="1" max="10"> range:Максимальное 10 минимальное 1
+        </fieldset>
+    </form>  
+    <form action="http://fe.it-academy.by/TestForm.php">
+        <fieldset><legend>Кнопки управления</legend>
+        <input type="submit"value="Отправить">
+        <input type="reset" value="Сбросить"><br>
+        <button type="button"><img src="mail.png" height="30px" width="30px"></button>
+        </fieldset>
+    </form> 
+</body>
+</html>
