@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+     .example
+        {
+          border-collapse: collapse;
+          border: 3px solid;
+          border-color: crimson;
+        }
+        th
+        {
+            border: 2px solid white;
+            background-color: darkgray;
+        }
+        td
+        {
+            border-right-style: dotted;
+            border-bottom-style: dotted;
+        }
+        table td:hover 
+        {
+        cursor: default;
+        }
+
+        tr:nth-child(2n+1)
+        {
+             background-color: #AAA;
+        }
+        tr:nth-child(1n+1):hover
+        {
+            background-color: greenyellow;
+        }
+        tr:nth-child(2n+1):hover
+        {
+            background-color: rgb(243, 6, 105);
+        }
+        tr:nth-child(3n+1):hover
+        {
+            background-color: rgb(42, 6, 243);
+        }
+        tr:nth-child(4n+1):hover
+        {
+            background-color: rgb(6, 207, 243);
+        }
+        .center{
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <table class="example">
+        <tr>
+            <th>Ф.И.О.</th>
+            <th>Пол</th>
+            <th>Должность</th>
+            <th>Дата рожд.</th>
+            <th>Данные 01</th>
+            <th>Данные 02</th>
+        </tr>
+        <tr id="1">
+            <td>Иванов Иван Иванович</td>
+            <td>М</td>
+            <td>Начальник</td>
+            <td>01.01.1960</td>
+            <td>6548</td>
+            <td>2598</td>
+        </tr>
+        <tr id="2">
+            <td>Петрова Мария Ивановна</td>
+            <td>Ж</td>
+            <td>Секретарь</td>
+            <td>02.01.1960</td>
+            <td>5848</td>
+            <td>3358</td>
+        </tr>
+        <tr id="3">
+            <td>Будулаев Роман Войтович</td>
+            <td>М</td>
+            <td>Пресс-аташе</td>
+            <td>01.11.1969</td>
+            <td>654858</td>
+            <td>259835</td>
+        </tr>
+        <tr id="4">
+            <td>Кузьмич Петр Васильевич</td>
+            <td>М</td>
+            <td>Советник</td>
+            <td>21.01.1966</td>
+            <td>6548966</td>
+            <td>2598666</td>
+        </tr>
+    </table>
+    
+    <button>Открыть</button>
+    <script
+            src="https://code.jquery.com/jquery-3.6.0.min.js"
+            integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4="
+            crossorigin="anonymous">
+    </script>
+    <script>
+        $(document).ready(function () {
+                $('#1').click(function(){
+                $("#1").css("display", "none");
+                });
+                $('#2').click(function(){
+                $("#2").css("display", "none");
+                });
+                $('#3').click(function(){
+                $("#3").css("display", "none");
+                });
+                $('#4').click(function(){
+                $("#4").css("display", "none");
+                });
+                $('button').click(function(){
+                $("#2").css("display", 'block');
+                });
+        });
+    </script>
+</body>
+</html>
