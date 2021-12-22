@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>document</title>
+    <style> 
+        table{
+            border: dotted;
+        }
+    
+        tr td:hover{
+             cursor: default;
+        }
+        tr:nth-child(2n+1){
+            background-color: rgb(122, 124, 126);
+        }
+        button{
+            background-color: steelblue;
+            color: white;
+        }
+        .first{
+            background-color: tomato;
+        }
+    </style>
+</head>
+<body>
+   <table>
+    <tr>
+        <th>Ф.И.О.</th>
+        <th>Пол</th>
+        <th>Должность</th>
+        <th>Дата рожд.</th>
+        <th>Данные 01</th>
+        <th>Данные 02</th>
+    </tr>
+   <tr id="first">
+        <td>Иванов Иван Иванович</td>
+        <td>М</td>
+        <td>Начальник</td>
+        <td>01.01.1960</td>
+        <td>6548</td>
+        <td>2598</td>
+    </tr>
+    <tr id="two">
+        <td>Петрова Мария Ивановна</td>
+        <td>Ж</td>
+        <td>Секретарь</td>
+        <td>02.01.1960</td>
+        <td>5848</td>
+        <td>3358</td>
+    </tr>
+    <tr id="three">
+        <td>Будулаев Роман Войтович</td>
+        <td>М</td>
+        <td>Пресс-аташе</td>
+        <td>01.11.1969</td>
+        <td>654858</td>
+        <td>259835</td>
+    </tr>
+    <tr id="four">
+        <td>Кузьмич Петр Васильевич</td>
+        <td>М</td>
+        <td>Советник</td>
+        <td>21.01.1966</td>
+        <td>6548966</td>
+        <td>2598666</td>
+    </tr>
+   </table>
+   <button>Показать все строки</button>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js" 
+            integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" 
+            crossorigin="anonymous">
+    </script>
+    <script>
+        $(document).ready(function ($) {
+           
+    $("#first").click(function() {
+        $("#first").slideToggle ( "slow" )
+    });
+    $("#two").click(function() {
+        $("#two").slideToggle ()
+    });
+    $("#three").click(function() {
+        $("#three").slideToggle ()
+    });
+    $("#four").click(function() {
+        $("#four").slideToggle ()
+    });
+    $("button").click(function() {
+        $("tr").show()
+    });
+        });
+    </script>
+</body>
+</html>
